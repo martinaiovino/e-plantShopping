@@ -14,7 +14,7 @@ const CartItem = ({ onContinueShopping }) => {
     cart.forEach((item) => {
         const numericCost = parseFloat(item.cost.substring(1));
         const quantity = item.quantity;
-        total += cost * quantity;
+        total += numericCost * quantity;
     });
 
     return total.toFixed(2);
@@ -34,7 +34,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleDecrement = (item) => {
-    if (item.quantity >= 1) {
+    if (item.quantity > 1) {
         dispatch(updateQuantity({ name: item.name, quantity: item.quantity - 1 }));
     } else {
         dispatch(removeItem(item.name));
