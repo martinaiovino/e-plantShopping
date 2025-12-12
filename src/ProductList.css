@@ -138,6 +138,7 @@ body {
 }
 .tag a{
     text-decoration: none;
+    margin-left: 1rem;
 }
 .tag {
     width: 400px;
@@ -249,4 +250,18 @@ body {
       .ul div {
         text-align: center; /* Align text to the center */
       }
+  }
+
+  /* category header */
+  .category {
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+  }
+
+  /* product button disabled */
+  .product-button:disabled {
+    background-color: gray;
   }
